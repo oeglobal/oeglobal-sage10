@@ -8,7 +8,7 @@
     @include('partials.header')
 
     <div class="wrap container">
-      <div class="content">
+      <div class="content bg-blue mb-6 p-6">
         <main class="main">
           @yield('content')
         </main>
