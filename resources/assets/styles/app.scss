@@ -5,22 +5,18 @@
  * @see https://tailwindcss.com/docs/preflight
  * @see https://tailwindcss.com/docs/adding-base-styles
  */
-//@tailwind base;
+@tailwind base;
 
 /**
  * Tailwind components. Define your own below or use/write a plugin.
  *
  * @see https://tailwindcss.com/docs/extracting-components
  */
-//@tailwind components;
+@tailwind components;
 
 /**
  * Tailwind utilities. Define your own below or use/write a plugin.
  *
  * @see https://tailwindcss.com/docs/adding-new-utilities
  */
-//@tailwind utilities;
-
-body {
-  background-color: blue;
-}
+@tailwind utilities;

@@ -35,12 +35,15 @@ mix
 mix.browserSync('latam.test');
 
 // Styles
-mix.sass(src`styles/app.scss`, 'styles');
+mix.sass(src`styles/app.scss`, 'styles')
+  .tailwind();
 
 // JavaScript
 mix.js(src`scripts/app.js`, 'scripts')
-  .js(src`scripts/customizer.js`, 'scripts')
-  .extract();
+  .js(src`scripts/customizer.js`, 'scripts');
+
+// https://github.com/roots/sage/issues/2204
+//  .extract();
 
 // Assets
 mix.copyDirectory(src`images`, publicPath`images`)
@@ -56,12 +59,11 @@ mix.options({
   processCssUrls: false,
 });
 
-// mix.purgeCss();
-
 // Source maps when not in production.
 mix.sourceMaps(false, 'source-map');
 
 // Hash and version files in production.
 if (mix.inProduction()) {
   mix.version();
+  mix.purgeCss();
 }
