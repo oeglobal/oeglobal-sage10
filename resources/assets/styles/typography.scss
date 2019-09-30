@@ -1,3 +1,21 @@
-h1 {
-  @apply text-5xl;
+.h1 {
+  @apply mb-8 text-4xl leading-tight font-bold font-sans;
+}
+
+.p {
+  @apply mb-4 font-sans text-sm leading-normal;
+}
+
+.base {
+  @apply mb-4 font-serif text-base leading-relaxed;
+}
+
+article {
+  h1 {
+    @apply h1;
+  }
+
+  p {
+    @apply p;
+  }
 }

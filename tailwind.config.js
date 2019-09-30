@@ -21,6 +21,28 @@ module.exports = {
           'orange-cream': '#FFC794',
         },
       },
+      lineHeight: {
+        tight: 1.2,
+        relaxed: 1.6,
+      },
+      fontFamily: {
+        sans: [
+          'Montserrat',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          '"Noto Sans"',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+          '"Noto Color Emoji"',
+        ],
+
+      },
     },
     container: {
       center: true,

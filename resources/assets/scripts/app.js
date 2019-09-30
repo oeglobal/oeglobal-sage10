@@ -8,13 +8,14 @@ import { router } from 'js-dom-router';
  * DOM-based routing
  */
 import about from './routes/about';
+import common from './routes/common';
 
 /**
  * Below is an example of a dynamic import; it will not be loaded until it's needed.
  *
  * See: {@link https://webpack.js.org/guides/code-splitting/#dynamic-imports | Dynamic Imports}
  */
-const home = async () => import(/* webpackChunkName: "scripts/routes/home" */ './routes/home');
+// const home = async () => import(/* webpackChunkName: "scripts/routes/home" */ './routes/home');
 
 /**
  * Set up DOM router
@@ -25,5 +26,6 @@ const home = async () => import(/* webpackChunkName: "scripts/routes/home" */ '.
  */
 router
   .on('about-us', about)
-  .on('home', async (event) => (await home()).default(event))
+  // .on('home', async (event) => (await home()).default(event))
+  .on('page', common)
   .ready();
