@@ -20,6 +20,12 @@ module.exports = {
           'orange': '#FF922D',
           'orange-cream': '#FFC794',
         },
+        'black': '#3333333',
+        'black2': '#4D4D4D',
+        'gray1': '#666666',
+        'gray2': '#999999',
+        'gray3': '#CCCCCC',
+        'gray4': '#E6E6E6',
       },
       lineHeight: {
         tight: 1.2,
