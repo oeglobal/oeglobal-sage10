@@ -47,15 +47,21 @@ module.exports = {
           '"Segoe UI Symbol"',
           '"Noto Color Emoji"',
         ],
-
       },
+      fontSize: {
+        '3xs': '0.5rem',
+        '2xs': '0.625rem',
+      },
+      textStrokeWidth: theme => theme('borderWidth'),
     },
     container: {
       center: true,
       padding: '1rem',
     },
   },
-  variants: {},
+  variants: {
+    textStrokeWidth: ['responsive', 'hover'],
+  },
   plugins: [
     wordpressUtilities,
   ],

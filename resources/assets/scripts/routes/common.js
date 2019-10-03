@@ -1,3 +1,5 @@
+import hoverintent from 'hoverintent/dist/hoverintent.min';
+
 export default () => {
   window.WebFontConfig = {
     google: {families: ['Montserrat:400,600,700&amp;subset=latin-ext']},
@@ -10,5 +12,25 @@ export default () => {
     s.parentNode.insertBefore(wf, s);
   })(document);
 
-  console.log('blah?');
+  $('.menu-item.has-children').each(function () {
+    hoverintent(this,
+      () => {
+        $(this).addClass('is-open');
+      },
+      () => {
+        $(this).removeClass('is-open');
+      }).options({
+      timeout: 500,
+      handleFocus: true,
+    });
+
+    $(this).on('click', function (event) {
+      $(this).toggleClass('is-open');
+      event.stopPropagation();
+    });
+  });
+
+  $('.js-toggle-menu').on('click', () => {
+    $('body').toggleClass('menu-open');
+  });
 }

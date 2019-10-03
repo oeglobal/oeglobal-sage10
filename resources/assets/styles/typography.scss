@@ -39,6 +39,7 @@
     rgba($int-turq, 0.5) $size
   );
   background-position: right 50% bottom #{$offset};
+  transition: background-position 200ms;
 
   &:hover {
     background-image: linear-gradient(
@@ -46,6 +47,7 @@
       transparent calc(100% - #{$size}),
       $int-turq $size
     );
+    background-position: right 50% bottom 0;
   }
 }
 
