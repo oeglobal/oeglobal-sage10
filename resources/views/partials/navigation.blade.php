@@ -1,7 +1,7 @@
 @if ($navigation)
   <ul class="nav nav-dropdown flex">
     @foreach ($navigation as $item)
-      <li class="menu-item {{ $item->children ? 'has-children is-open' : '' }} {{ $item->active ? 'active' : '' }}">
+      <li class="menu-item {{ $item->children ? 'has-children' : '' }} {{ $item->active ? 'active' : '' }}">
         <a href="{{ $item->url }}">
           {{ $item->label }}
         </a>
